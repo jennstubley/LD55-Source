@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: GooAnimator
+  m_Controller: {fileID: 9100000, guid: 7147785a8fb22a443b8f5d1357477b4d, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: -6357593612037020829, guid: c0a2ea1d22f715a409772323695cc1f5, type: 3}
+    m_OverrideClip: {fileID: -6239216113759591374, guid: ccd87c27f9e59bb4a9e3f14c936e8a62, type: 3}
+  - m_OriginalClip: {fileID: -3419257869308726280, guid: c0a2ea1d22f715a409772323695cc1f5, type: 3}
+    m_OverrideClip: {fileID: -3419257869308726280, guid: ccd87c27f9e59bb4a9e3f14c936e8a62, type: 3}
