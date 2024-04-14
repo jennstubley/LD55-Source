@@ -52,6 +52,12 @@ public class Move : MonoBehaviour
             body.velocity = Vector2.zero;
         }
 
+        if (GetComponent<Hitpoints>().Current <= 0)
+        {
+            GameController.Instance.ShowDeathScreen();
+            GetComponent<Hitpoints>().Reset();
+        }
+
     }
 
     private void ValidateAndSetPosition(float x, float y)

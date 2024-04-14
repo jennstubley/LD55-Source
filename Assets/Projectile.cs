@@ -8,6 +8,7 @@ public class Projectile : MonoBehaviour
     public Vector3 Direction;
     public float LifeSpan;
     public float Damage;
+    public string TargetMask;
 
     private Collider2D col;
 
@@ -36,7 +37,8 @@ public class Projectile : MonoBehaviour
     private void CheckForHits()
     {
         ContactFilter2D contactFilter = new ContactFilter2D();
-        contactFilter.SetLayerMask(LayerMask.GetMask("Player"));
+        contactFilter.SetLayerMask(LayerMask.GetMask(TargetMask));
+        contactFilter.useTriggers = true;
         Collider2D[] overlaps = new Collider2D[1];
         col.OverlapCollider(contactFilter, overlaps);
         if (overlaps[0] != null)

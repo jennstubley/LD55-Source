@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class PowerUI : MonoBehaviour
 {
-
     public Attack PlayerPower;
 
     private TMP_Text text;

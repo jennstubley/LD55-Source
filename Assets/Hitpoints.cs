@@ -26,6 +26,7 @@ public class Hitpoints : MonoBehaviour
     public void Damage(float damage)
     {
         Current -= damage;
+        Current = Mathf.Max(0, Current);
         if (splat != null)
         {
             splat.Splat();

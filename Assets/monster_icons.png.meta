@@ -185,6 +185,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: monster_icons_3
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f346831cd56f9a48959c4ff9ee097e1
+      internalID: -1060666091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -199,6 +220,7 @@ TextureImporter:
       monster_icons_0: 153551566
       monster_icons_1: 451452896
       monster_icons_2: 1072623136
+      monster_icons_3: -1060666091
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

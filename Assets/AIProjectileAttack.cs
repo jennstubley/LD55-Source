@@ -7,13 +7,16 @@ public class AIProjectileAttack : MonoBehaviour
     public GameObject ProjectilePrefab;
     public GameObject Target;
     public float FireRate;
+    public AudioClip ShootClip;
 
     private float fireDelay;
+    private AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
         fireDelay = FireRate;
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -32,6 +35,7 @@ public class AIProjectileAttack : MonoBehaviour
         GameObject proj = GameObject.Instantiate(ProjectilePrefab);
         proj.transform.position = transform.position;
         proj.GetComponent<Projectile>().Direction = Target.transform.position - transform.position;
-        Debug.Log(proj.GetComponent<Projectile>().Direction);
+        proj.GetComponent<Projectile>().TargetMask = "Player";
+        audioSource.PlayOneShot(ShootClip);
     }
 }

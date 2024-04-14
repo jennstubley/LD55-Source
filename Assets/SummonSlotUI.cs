@@ -8,6 +8,7 @@ using static GameController;
 public class SummonSlotUI : MonoBehaviour
 {
     public Sprite EmptyImage;
+    public Sprite LockedImage;
 
     // Start is called before the first frame update
     void Start()
@@ -15,7 +16,7 @@ public class SummonSlotUI : MonoBehaviour
         int i = 0;
         foreach (Transform child in transform)
         {
-            child.Find("Image").GetComponent<Image>().sprite = EmptyImage;
+            child.Find("Image").GetComponent<Image>().sprite = i < 1 ? EmptyImage : LockedImage;
             child.Find("Slot Text").Find("Slot ID").GetComponent<TMP_Text>().text = "Slot " + ( i + 1 );
             child.Find("Slot Text").Find("Name").GetComponent<TMP_Text>().text = "Empty";
             var index = i;
@@ -32,8 +33,8 @@ public class SummonSlotUI : MonoBehaviour
         {
             if (GameController.Instance.MonsterSlots[i] == null)
             {
-                child.Find("Image").GetComponent<Image>().sprite = EmptyImage;
-                child.Find("Slot Text").Find("Name").GetComponent<TMP_Text>().text = "Empty";
+                child.Find("Image").GetComponent<Image>().sprite = GameController.Instance.UnlockedSlots > i ? EmptyImage : LockedImage;
+                child.Find("Slot Text").Find("Name").GetComponent<TMP_Text>().text = GameController.Instance.UnlockedSlots > i ? "Empty" : "Locked";
             }
             else
             {

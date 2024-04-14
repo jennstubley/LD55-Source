@@ -121,14 +121,14 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: projectiles
     originalName: 
-    pivot: {x: 2.5, y: -4.166667}
+    pivot: {x: 1.0714287, y: -4.166667}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 6
+      width: 14
       height: 6
     spriteID: 1b380ee2a7a8ea94e8456e3a66a047f7
     spriteBone: []
@@ -153,7 +153,7 @@ ScriptedImporter:
       cellRect:
         x: 1
         y: 25
-        width: 6
+        width: 14
         height: 6
       spriteId: 1b380ee2a7a8ea94e8456e3a66a047f7
     linkedCells: []

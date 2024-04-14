@@ -8,17 +8,20 @@ public class AIAttack : MonoBehaviour
     public float Range;
     public float Damage;
     public float AttackInterval;
+    public AudioClip AttackClip;
 
     public GameObject AttackVisual;
 
     private float attackDelay;
     private float telegraphDelay;
     private Animator anim;
+    private AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
         attackDelay = AttackInterval;
         anim = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -54,6 +57,7 @@ public class AIAttack : MonoBehaviour
     private void DoAttack()
     {
         anim.SetTrigger("Attack");
+        audioSource.PlayOneShot(AttackClip);
         ContactFilter2D contactFilter = new ContactFilter2D();
         contactFilter.SetLayerMask(LayerMask.GetMask("Player"));
         Collider2D[] overlaps = new Collider2D[1];
